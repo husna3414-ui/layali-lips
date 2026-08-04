@@ -33,12 +33,14 @@ h1{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:34px;margin:
 .sub{color:var(--muted);font-size:14.5px;max-width:48ch;margin:6px auto 0}
 
 /* ---------- Cards & sections ---------- */
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 24px;margin:20px 0;
-  box-shadow:0 10px 40px -28px rgba(80,60,30,.4)}
-.sec-h{display:flex;align-items:center;gap:12px;margin:0 0 4px}
-.sec-n{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:22px;font-weight:700;min-width:26px}
-.sec-t{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;margin:0}
-.sec-d{color:var(--muted);font-size:13.5px;margin:2px 0 18px 38px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 26px;margin:18px 0;
+  box-shadow:0 14px 44px -30px rgba(80,60,30,.42);scroll-margin-top:20px}
+.sec-h{display:flex;align-items:center;gap:11px;margin:0 0 15px;padding:0 0 12px;border-bottom:1px solid var(--line)}
+.sec-h::before{content:'';flex:none;width:4px;height:22px;border-radius:2px;background:linear-gradient(var(--gold),var(--gold-deep))}
+.sec-h:has(.sec-n)::before{display:none}
+.sec-n{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:22px;font-weight:700;min-width:24px}
+.sec-t{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;margin:0;line-height:1.15;letter-spacing:.005em}
+.sec-d{color:var(--muted);font-size:13.5px;font-style:italic;margin:-7px 0 16px}
 
 /* ---------- Guide prose ---------- */
 .lead{font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.5;color:#4a4138;margin:0 0 6px}
@@ -100,8 +102,8 @@ a.price-card:hover{border-color:var(--gold);background:#fffaf3;transform:transla
 .notice.warn{background:#fff4f3;border-color:#f3c9c4;border-left-color:var(--err);color:#8a3b33}
 
 /* ---------- Form fields ---------- */
-.f{margin:0 0 18px}
-label.q{display:block;font-weight:500;font-size:14.5px;margin:0 0 7px}
+.f{margin:0 0 20px}
+label.q{display:block;font-weight:500;font-size:15px;margin:0 0 9px;color:#3a332c}
 .req{color:var(--gold-deep)}
 .hint{color:var(--muted);font-size:12.5px;font-weight:400;margin-top:2px}
 input[type=text],input[type=email],input[type=tel],input[type=date],input[type=number],textarea,select{
@@ -112,11 +114,11 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold);bo
 .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media(max-width:520px){.row{grid-template-columns:1fr}}
 .opts{display:flex;flex-direction:column;gap:9px;margin-top:4px}
-.opt{display:flex;gap:11px;align-items:flex-start;padding:11px 13px;border:1px solid var(--line);border-radius:11px;
-  cursor:pointer;background:#fffdfb;font-size:14.5px;transition:.15s}
-.opt:hover{border-color:var(--gold)}
-.opt input{margin-top:3px;accent-color:var(--gold-deep);width:16px;height:16px;flex:none}
-.opt.checked{border-color:var(--gold);background:linear-gradient(0deg,#fbf4ea,#fffdfb)}
+.opt{display:flex;gap:11px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:12px;
+  cursor:pointer;background:#fffdfb;font-size:14.5px;line-height:1.4;transition:border-color .18s,background .18s,box-shadow .18s}
+.opt:hover{border-color:var(--gold);background:#fffaf3}
+.opt input{margin-top:2px;accent-color:var(--gold-deep);width:17px;height:17px;flex:none}
+.opt.checked{border-color:var(--gold);background:linear-gradient(0deg,#fbf1e2,#fffdfb);box-shadow:0 4px 14px -8px rgba(184,145,96,.45)}
 .grid-opts{display:grid;grid-template-columns:1fr 1fr;gap:9px}
 @media(max-width:560px){.grid-opts{grid-template-columns:1fr}}
 .scale{display:flex;gap:7px;flex-wrap:wrap}
